@@ -2,6 +2,12 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - Tree",
+      "request": "launch",
+      "mainClass": "Tree"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - GFG",
       "request": "launch",
       "mainClass": "GFG"

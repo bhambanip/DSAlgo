@@ -5,7 +5,7 @@ import java.util.Stack;
  */
 public class TreeHelper {
 
-  public static void pushLeft(Node n, Stack<E> s) {
+  public static void pushLeft(TNode n, Stack<TNode> s) {
     while (n != null) {
       s.push(n);
       n = n.left;

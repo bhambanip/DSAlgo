@@ -4,13 +4,26 @@ import java.util.Stack;
  * BST
  */
 public class BST {
-  Node root;
+  TNode root;
 
   public BST() {
     this.root = null;
   }
 
-  public void inOrderTraversal(Node n) {
+  public TNode addNode(TNode root, int value) {
+    if (root == null) {
+      return new TNode(value);
+    }
+
+    if(root.value > value) {
+      root.left =
+    }
+return root;
+
+
+  }
+
+  public void inOrderTraversal(TNode n) {
     if (n == null) {
       return;
     }
@@ -19,17 +32,20 @@ public class BST {
     inOrderTraversal(n.right);
   }
 
-
-  public void inOrderTraversalStack(Node n) {
+  public void inOrderTraversalStack(TNode n) {
     if (n == null) {
       return;
     }
-    Stack<Node> s = new Stack<Node>();
-    System.out.println(n.value);
-    inOrderTraversal(n.right);
+    Stack<TNode> s = new Stack<TNode>();
+    TreeHelper.pushLeft(n, s);
+    while (!s.empty()) {
+      TNode t = s.pop();
+      System.out.println(t.value);
+      TreeHelper.pushLeft(t.right, s);
+    }
   }
 
-  public void printKLevel(Node root, int k) {
+  public void printKLevel(TNode root, int k) {
     if (root == null)
       return;
     if (k == 1) {
@@ -42,12 +58,13 @@ public class BST {
 
   public static void main(String[] args) {
     BST bt = new BST();
-    bt.root = new Node(1);
-    bt.root.left = new Node(2);
-    bt.root.right = new Node(3);
-    bt.root.left.left = new Node(4);
-    bt.root.left.right = new Node(5);
+    bt.root = new TNode(1);
+    bt.root.left = new TNode(2);
+    bt.root.right = new TNode(3);
+    bt.root.left.left = new TNode(4);
+    bt.root.left.right = new TNode(5);
     // bt.inOrderTraversal(bt.root);
-    bt.printKLevel(bt.root, 2);
+    // bt.printKLevel(bt.root, 2);
+    bt.inOrderTraversalStack(bt.root);
   }
 }

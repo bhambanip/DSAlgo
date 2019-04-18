@@ -1,12 +1,12 @@
 /**
  * Node
  */
-public class Node {
+public class TNode {
 
   int value;
-  Node left, right;
+  TNode left, right;
 
-  public Node(int value) {
+  public TNode(int value) {
     this.value = value;
     left = null;
     right = null;
