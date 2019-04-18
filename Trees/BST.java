@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 /**
@@ -10,17 +12,21 @@ public class BST {
     this.root = null;
   }
 
-  public TNode addNode(TNode root, int value) {
-    if (root == null) {
+  public void addNode(int value) {
+    this.root = addNodeRec(this.root, value);
+  }
+
+  public TNode addNodeRec(TNode n, int value) {
+    if (n == null) {
       return new TNode(value);
     }
 
-    if(root.value > value) {
-      root.left =
+    if (n.value > value) {
+      n.left = addNodeRec(n.left, value);
+    } else {
+      n.right = addNodeRec(n.right, value);
     }
-return root;
-
-
+    return n;
   }
 
   public void inOrderTraversal(TNode n) {
@@ -45,6 +51,24 @@ return root;
     }
   }
 
+  public void BFT(TNode n) {
+    if (n == null) {
+      return;
+    }
+    Queue<TNode> q = new LinkedList<TNode>();
+    q.add(n);
+    while (!q.isEmpty()) {
+      TNode t = q.poll();
+      System.out.println(t.value);
+      if (t.left != null) {
+        q.add(t.left);
+      }
+      if (t.right != null) {
+        q.add(t.right);
+      }
+    }
+  }
+
   public void printKLevel(TNode root, int k) {
     if (root == null)
       return;
@@ -58,13 +82,17 @@ return root;
 
   public static void main(String[] args) {
     BST bt = new BST();
-    bt.root = new TNode(1);
-    bt.root.left = new TNode(2);
-    bt.root.right = new TNode(3);
-    bt.root.left.left = new TNode(4);
-    bt.root.left.right = new TNode(5);
+    bt.addNode(5);
+    bt.addNode(3);
+    bt.addNode(7);
+    bt.addNode(2);
+    bt.addNode(4);
+    bt.addNode(6);
+    bt.addNode(8);
+    bt.addNode(1);
     // bt.inOrderTraversal(bt.root);
     // bt.printKLevel(bt.root, 2);
-    bt.inOrderTraversalStack(bt.root);
+    // bt.inOrderTraversalStack(bt.root);
+    bt.BFT(bt.root);
   }
 }
