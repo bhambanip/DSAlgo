@@ -1,0 +1,16 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - BST",
+      "request": "launch",
+      "mainClass": "BST"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - GFG",
+      "request": "launch",
+      "mainClass": "GFG"
+    }
+  ]
+}

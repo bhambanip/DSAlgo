@@ -1,0 +1,28 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - GFG",
+      "request": "launch",
+      "mainClass": "GFG"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - BST",
+      "request": "launch",
+      "mainClass": "BST"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - SubsetsInt",
+      "request": "launch",
+      "mainClass": "SubsetsInt"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Subsets",
+      "request": "launch",
+      "mainClass": "Subsets"
+    }
+  ]
+}
