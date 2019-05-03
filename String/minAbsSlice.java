@@ -2,7 +2,6 @@
 /**
  * minAbsSlice
  */
-import java.util.*;
 
 public class minAbsSlice {
   // Prints the array

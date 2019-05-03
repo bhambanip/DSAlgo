@@ -2,6 +2,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - Levenshtein",
+      "request": "launch",
+      "mainClass": "Levenshtein",
+      "projectName": "DSAlgo_1a30df3b"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - levenshtein",
+      "request": "launch",
+      "mainClass": "levenshtein",
+      "projectName": "DSAlgo_1a30df3b"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - minAbsSlice",
+      "request": "launch",
+      "mainClass": "minAbsSlice",
+      "projectName": "DSAlgo_1a30df3b"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - PracticeTest",
+      "request": "launch",
+      "mainClass": "PracticeTest",
+      "projectName": "DSAlgo_1a30df3b"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - printPath",
       "request": "launch",
       "mainClass": "printPath",
